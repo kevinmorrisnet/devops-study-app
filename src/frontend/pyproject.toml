@@ -1,0 +1,16 @@
+[project]
+name = "study-tracker-frontend"
+version = "0.0.0"
+description = "Frontend for DevOps Study Tracker application"
+readme = "README.md"
+authors = [{ name = "Kevin Morris", email = "kevin@kevin-morris.net" }]
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+study-tracker-frontend = "frontend.main:main"
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
