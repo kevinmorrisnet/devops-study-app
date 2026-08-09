@@ -1,6 +1,4 @@
 FROM python:3.13-alpine AS builder
-
-# Install uv
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
 # Change the working directory to the `app` directory
@@ -24,14 +22,15 @@ FROM python:3.13-alpine
 # Create a non-root user and group with specific IDs
 RUN addgroup -S -g 1000 app && adduser -S -u 1000 -G app app
 
-# Copy the environment, but not the source code
+# Copy the environment from builder
 COPY --from=builder --chown=app:app /app/.venv /app/.venv
 
 # Switch to the non-root user
 USER app
 
 # Expose the correct port
-EXPOSE 22112
+EXPOSE 22111
 
-# Run the application
-CMD ["/app/.venv/bin/study-tracker-api"]
+# Run the application using the compiled app command
+CMD ["/app/.venv/bin/study-tracker-frontend"]
+
