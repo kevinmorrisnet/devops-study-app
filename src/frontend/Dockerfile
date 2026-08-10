@@ -33,4 +33,3 @@ EXPOSE 22111
 
 # Run the application using the compiled app command
 CMD ["/app/.venv/bin/study-tracker-frontend"]
-
