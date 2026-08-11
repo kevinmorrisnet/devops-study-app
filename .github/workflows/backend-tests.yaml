@@ -1,8 +1,6 @@
 name: Backend Tests
-
 on:
   pull_request:
-
 jobs:
   check_paths:
     runs-on: ubuntu-latest
@@ -17,7 +15,6 @@ jobs:
             backend:
               - 'src/backend/**'
               - '.github/workflows/backend-tests.yaml'
-
   test:
     name: Test Backend
     needs: check_paths
@@ -26,26 +23,41 @@ jobs:
     defaults:
       run:
         working-directory: ./src/backend
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
       - name: Install UV
         uses: astral-sh/setup-uv@v5
-
       - name: Set up Python
         run: uv python install
-
       - name: Install dependencies
         run: |
           uv sync --locked --dev
-
       - name: Lint with Ruff
         run: |
           uv run ruff check --output-format=github --target-version=py313 src tests
           uv run ruff format --diff --check --target-version=py313 src tests
-
-      - name: Run Backend Tests
+      - name: Run tests with coverage
         run: |
-          uv run pytest
+          uv run pytest tests/ -v --cov=src/backend --cov-report=xml --cov-fail-under=80
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: ./src/backend/coverage.xml
+          retention-days: 7
+        if: ${{ always() }}
+      - name: Coverage Report
+        uses: irongut/CodeCoverageSummary@v1.3.0
+        with:
+          filename: ./src/backend/coverage.xml
+          badge: true
+          format: markdown
+          output: both
+      - name: Add Coverage PR Comment
+        uses: marocchino/sticky-pull-request-comment@v2
+        if: github.event_name == 'pull_request'
+        with:
+          header: test-coverage
+          recreate: true
+          path: code-coverage-results.md
