@@ -20,6 +20,7 @@ jobs:
         uses: nolar/setup-k3d-k3s@v1
         with:
           version: "latest"
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           skip-creation: true
 
       - name: Install kubectl
