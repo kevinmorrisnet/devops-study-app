@@ -1,4 +1,6 @@
 [tools]
+k3d = "latest"
+kubectl = "latest"
 pre-commit = "latest"
 python = "3.13.14"
 ruff = "0.11.7"
