@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/kevinmorrisnet/devops-study-app/compare/backend-v0.1.0...backend-v0.2.0) (2026-08-12)
+
+
+### Features
+
+* **backend:** added container image building and pushing ([#13](https://github.com/kevinmorrisnet/devops-study-app/issues/13)) ([4926d5b](https://github.com/kevinmorrisnet/devops-study-app/commit/4926d5b27983a4fc8718dadcef4d024460a6d473))
+
 ## 0.1.0 (2026-08-12)
 
 
