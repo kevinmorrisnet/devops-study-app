@@ -1,5 +1,16 @@
 FROM python:3.13-alpine AS builder
+
+# Install uv
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
+
+# added these two lines to counter the failure due to symlink to python in .venv
+# prevents download of python to /root
+# otherwise error "exec /app/.venv/bin/study-tracker-api: no such file or directory"
+# because python binary was in container1 but never copied to container2
+# uv sync silently copies .venv and also quietly stores the python interpreter outside in /root/.local/share/uv/python
+# false reliance on uv sync creating self-contained package with dependencies present
+ENV UV_PYTHON_DOWNLOADS=never
+ENV UV_NO_MANAGED_PYTHON=1
 
 # Change the working directory to the `app` directory
 WORKDIR /app
