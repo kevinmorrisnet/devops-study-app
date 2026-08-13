@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/kevinmorrisnet/devops-study-app/compare/frontend-v0.1.0...frontend-v0.1.1) (2026-08-13)
+
+
+### Bug Fixes
+
+* **app:** trigger release-please version bump ([c7bee6b](https://github.com/kevinmorrisnet/devops-study-app/commit/c7bee6b3706d71fa522c1a864cb6a4858eaedc01))
+
 ## 0.1.0 (2026-08-12)
 
 
