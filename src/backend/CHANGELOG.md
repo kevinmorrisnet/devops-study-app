@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/kevinmorrisnet/devops-study-app/compare/backend-v1.1.0...backend-v1.2.0) (2026-08-13)
+
+
+### Features
+
+* **gha:** full flow final test ([#35](https://github.com/kevinmorrisnet/devops-study-app/issues/35)) ([417aaa3](https://github.com/kevinmorrisnet/devops-study-app/commit/417aaa322a390d69d4361f41e3d9409712bb660e))
+
 ## [1.1.0](https://github.com/kevinmorrisnet/devops-study-app/compare/backend-v1.0.0...backend-v1.1.0) (2026-08-13)
 
 
