@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/kevinmorrisnet/devops-study-app/compare/backend-v1.0.0...backend-v1.1.0) (2026-08-13)
+
+
+### Features
+
+* add comment to backend and frontend main.py ([f493238](https://github.com/kevinmorrisnet/devops-study-app/commit/f493238d120429af6cd4182dd3899ca81a74cbd0))
+
 ## [0.4.0](https://github.com/kevinmorrisnet/devops-study-app/compare/backend-v0.3.1...backend-v0.4.0) (2026-08-13)
 
 
