@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/kevinmorrisnet/devops-study-app/compare/backend-v0.3.0...backend-v0.3.1) (2026-08-13)
+
+
+### Bug Fixes
+
+* **app:** trigger release-please version bump ([c7bee6b](https://github.com/kevinmorrisnet/devops-study-app/commit/c7bee6b3706d71fa522c1a864cb6a4858eaedc01))
+
 ## [0.3.0](https://github.com/kevinmorrisnet/devops-study-app/compare/backend-v0.2.1...backend-v0.3.0) (2026-08-13)
 
 
