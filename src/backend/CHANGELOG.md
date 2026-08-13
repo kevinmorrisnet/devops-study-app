@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/kevinmorrisnet/devops-study-app/compare/backend-v0.3.1...backend-v0.4.0) (2026-08-13)
+
+
+### Features
+
+* **app:** deploy gitops workflow ([fc94b67](https://github.com/kevinmorrisnet/devops-study-app/commit/fc94b67792871ae1bca48466b0e70fb43b2e149b))
+
 ## [0.3.1](https://github.com/kevinmorrisnet/devops-study-app/compare/backend-v0.3.0...backend-v0.3.1) (2026-08-13)
 
 
