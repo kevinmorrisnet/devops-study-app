@@ -83,7 +83,7 @@ The devcontainer setup script does this automatically.
 
 ## Testing and CI
 
-From the first src/backend:
+Run this from the src/backend terminal you opened above:
 
 ```bash
 uv run pytest tests/ -v --cov=src/backend --cov-report=xml --cov-fail-under=80
