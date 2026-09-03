@@ -45,7 +45,7 @@ Sessions persist to a flat CSV rather than a database, that is intentional for a
 
 Built around mise and a devcontainer. Opening it in a devcontainer runs `scripts/setup` automatically (`mise trust` + `mise install`).
 
-Without a devcontainer, open separate terminals:
+Without a devcontainer, starting from the root of the repo, open two separate terminals:
 
 ```bash
 # backend
