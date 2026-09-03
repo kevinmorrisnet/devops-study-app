@@ -45,14 +45,16 @@ Sessions persist to a flat CSV rather than a database, that is intentional for a
 
 Built around mise and a devcontainer. Opening it in a devcontainer runs `scripts/setup` automatically (`mise trust` + `mise install`).
 
-Without a devcontainer:
+Without a devcontainer, open separate terminals:
 
 ```bash
 # backend
 cd src/backend
 uv sync
 uv run study-tracker-api
+```
 
+```bash
 # frontend, in a second terminal
 cd src/frontend
 uv sync
@@ -81,8 +83,9 @@ The devcontainer setup script does this automatically.
 
 ## Testing and CI
 
+From the first src/backend:
+
 ```bash
-cd src/backend
 uv run pytest tests/ -v --cov=src/backend --cov-report=xml --cov-fail-under=80
 ```
 
